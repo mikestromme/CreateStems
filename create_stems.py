@@ -1,9 +1,12 @@
 from pydub import AudioSegment
+from pathlib import Path
 
 
 def main():
-    mp3_file = 'Limelight.mp3'
-    wav_file = 'Limelight.wav'
+    input_folder = Path('input/')
+    output_folder = Path('output/')
+    mp3_file = input_folder / 'Limelight.mp3'
+    wav_file = input_folder / 'Limelight.wav'
 
     audio = AudioSegment.from_mp3(mp3_file)
     audio.export(wav_file, format='wav')
@@ -11,8 +14,8 @@ def main():
 
     from spleeter.separator import Separator
 
-    input_file = 'Limelight.wav'
-    output_folder = 'output/'
+    input_file = input_folder / 'Limelight.wav'
+    
 
     separator = Separator('spleeter:4stems')
     separator.separate_to_file(input_file, output_folder)
