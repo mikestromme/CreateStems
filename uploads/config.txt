@@ -1,0 +1,3 @@
+[configuration]
+openai_api = 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
+rapid_api = a617d6467dmshac84323ce581a72p11caa9jsn1adf8bbcbd47
