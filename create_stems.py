@@ -19,14 +19,14 @@ def main():
     mp3_file = input_folder / 'Gel - Collective Soul.mp3'
     wav_file = input_folder / 'Gel - Collective Soul.wav'
 
-    audio = AudioSegment.from_mp3(mp3_file)
-    audio.export(wav_file, format='wav')
+    audio = AudioSegment.from_mp3(str(mp3_file))
+    audio.export(str(wav_file), format='wav')
     
 
     input_file = input_folder / 'Gel - Collective Soul.wav'    
 
     separator = Separator('spleeter:4stems')
-    separator.separate_to_file(input_file, output_folder)
+    separator.separate_to_file(str(input_file), str(output_folder))
 
 if __name__ == '__main__':
     # Add the freeze_support() call
