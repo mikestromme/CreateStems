@@ -3,3 +3,4 @@ output/
 pretrained_models/
 input/
 uploads/
+venv/
